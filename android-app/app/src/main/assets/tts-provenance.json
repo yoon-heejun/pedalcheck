@@ -1,0 +1,63 @@
+{
+  "model_id": "Supertone/supertonic-3",
+  "model_revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
+  "speaker": "M3",
+  "language": "ko",
+  "model_license": "BigScience Open RAIL-M",
+  "code_license": "MIT",
+  "inference": "local ONNX Runtime, offline, preset voice, no cloning",
+  "delivery": "neutral Korean explanatory broadcast script; no artificial pitch lowering",
+  "warnings": {
+    "warning_simultaneous": {
+      "spec": {
+        "text": "주의. 액셀과 브레이크를 함께 밟고 있습니다.",
+        "speaker": "M3",
+        "language": "ko",
+        "total_steps": 24,
+        "speed": 1.08,
+        "seed": 20261105,
+        "postprocess": "outer silence trim, loudness only; 48kHz PCM"
+      },
+      "file": "qa/tts-supertonic3/M3/warnings/warning_simultaneous.wav",
+      "duration": 2.59,
+      "sample_rate": 48000,
+      "sha256": "35d63a48cff7990b392aaf06e81da71dd33e67ecae1d32edc99de0b39dab6d6b",
+      "peak_dbfs": -3.32,
+      "generation_seconds": 2.82
+    },
+    "warning_full": {
+      "spec": {
+        "text": "주의. 액셀을 계속 깊게 밟고 있습니다.",
+        "speaker": "M3",
+        "language": "ko",
+        "total_steps": 24,
+        "speed": 1.08,
+        "seed": 20261105,
+        "postprocess": "outer silence trim, loudness only; 48kHz PCM"
+      },
+      "file": "qa/tts-supertonic3/M3/warnings/warning_full.wav",
+      "duration": 2.323,
+      "sample_rate": 48000,
+      "sha256": "f51f7bb8a034d48a3f4e748e73897c3184b6c01b8c7f57a526fca3aab999ed85",
+      "peak_dbfs": -2.24,
+      "generation_seconds": 2.3
+    },
+    "warning_speed": {
+      "spec": {
+        "text": "주의. 높은 속도에서 액셀을 계속 깊게 밟고 있습니다.",
+        "speaker": "M3",
+        "language": "ko",
+        "total_steps": 24,
+        "speed": 1.08,
+        "seed": 20261105,
+        "postprocess": "outer silence trim, loudness only; 48kHz PCM"
+      },
+      "file": "qa/tts-supertonic3/M3/warnings/warning_speed.wav",
+      "duration": 3.157,
+      "sample_rate": 48000,
+      "sha256": "8648ad3154ba6bcf7061989d3334e898405e3373334586c213f6c57594eeda4b",
+      "peak_dbfs": -2.02,
+      "generation_seconds": 3.1
+    }
+  }
+}

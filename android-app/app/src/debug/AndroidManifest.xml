@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <queries><intent><action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION"/><data android:scheme="package"/></intent></queries>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <application>
+        <service android:name=".PedalOverlayService" android:exported="false" android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-started stationary simulator-only pedal badge overlay; no real vehicle connection or driving approval" />
+        </service>
+    </application>
+</manifest>

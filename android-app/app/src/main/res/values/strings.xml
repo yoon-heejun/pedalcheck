@@ -1,0 +1,13 @@
+<resources>
+    <string name="widget_title">페달체크 · 시연 앱</string>
+    <string name="widget_description">실시간 페달 표시 미지원\n눌러서 정차 시연 열기</string>
+    <string name="overlay_warning">⚠ 경고\n%1$s</string>
+    <string name="overlay_stop">작은 표시 종료</string>
+    <string name="overlay_notification_title">페달체크 모의 표시 실행 중</string>
+    <string name="overlay_mock_marker">모의신호·실차 미연동</string>
+    <string name="overlay_permission_missing">다른 앱 위 표시 권한이 없습니다. 설정이 제공되는 기기에서 직접 허용한 후 시작하세요.</string>
+    <string name="overlay_settings_unavailable">이 Pleos 이미지에는 해당 권한 설정 화면이 없습니다. 일반 설치 앱의 상시 표시가 승인된 것으로 볼 수 없습니다.</string>
+    <string name="overlay_start_failed">작은 표시를 시작하지 못했습니다. 권한 및 시스템 제한을 확인하세요.</string>
+    <string name="overlay_demo_only">모의 소스에서만 작은 표시를 시작할 수 있습니다.</string>
+    <string name="demo_slider_value">%1$s  %2$d%3$s</string>
+</resources>

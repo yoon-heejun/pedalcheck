@@ -1,0 +1,8 @@
+<resources>
+    <style name="PedalTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F5F5F2</item>
+        <item name="android:fontFamily">@font/pretendard</item>
+        <item name="android:colorAccent">#245AC3</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
