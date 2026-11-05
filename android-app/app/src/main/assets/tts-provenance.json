@@ -16,34 +16,34 @@
       "top_p": 1.0,
       "clips": {
         "warning_male_simultaneous": {
-          "text": "주의! 액셀과 브레이크를 함께 밟고 있습니다!",
-          "take": 4,
-          "heard": "주의! 액셀과 브레이크를 함께 밟고 있습니다",
+          "text": "경고! 액셀과 브레이크를 함께 밟고 있습니다!",
+          "take": 5,
+          "heard": "경고! 액셀과 브레이크를 함께 밟고 있습니다.",
           "similarity": 1.0,
-          "seconds": 3.14,
-          "f0": 178.4,
+          "seconds": 3.06,
+          "f0": 141.2,
           "clipped": 0,
-          "sha256": "a17863ed9062f6681aec2efb650eeb1d622f3f9a96aa8a664ddc8891b77bfb8b"
+          "sha256": "e65b49be571467e57de1c1dacf49d1de3e56484d6cef4731b900f5fbfe80b2ca"
         },
         "warning_male_full": {
-          "text": "주의! 액셀을 계속 깊게 밟고 있습니다!",
+          "text": "경고! 액셀을 계속 깊게 밟고 있습니다!",
           "take": 4,
-          "heard": "주의! 액셀을 계속 깊게 밟고 있습니다",
+          "heard": "경고! 액셀을 계속 깊게 밟고 있습니다.",
           "similarity": 1.0,
-          "seconds": 2.65,
-          "f0": 185.3,
+          "seconds": 3.1,
+          "f0": 145.5,
           "clipped": 0,
-          "sha256": "b9061e4a8a5bcea61c7eec9ea3361a3b2812c1fc828365f5a8c00d03ec0d73b8"
+          "sha256": "a176b677dfef4b8083ff4b08b40ec4cceae5e410db67183720b5ffe2c28596df"
         },
         "warning_male_speed": {
-          "text": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다!",
-          "take": 3,
-          "heard": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다.",
+          "text": "경고! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 4,
+          "heard": "경고! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다.",
           "similarity": 1.0,
-          "seconds": 3.93,
-          "f0": 154.8,
+          "seconds": 3.89,
+          "f0": 158.9,
           "clipped": 0,
-          "sha256": "ed1ee968eae2f6d14bb9c1fae22c7eb0b41d831a1ebbdce29170dab853bdbe1b"
+          "sha256": "aa798f71366f9e419ff211c5946a2a268e390342f1bf688af31566aac11aa874"
         }
       }
     },
@@ -54,34 +54,34 @@
       "top_p": 1.0,
       "clips": {
         "warning_female_simultaneous": {
-          "text": "주의! 액셀과 브레이크를 함께 밟고 있습니다!",
-          "take": 5,
-          "heard": "주의! 액셀과 브레이크를 함께 밟고 있습니다",
+          "text": "경고! 액셀과 브레이크를 함께 밟고 있습니다!",
+          "take": 2,
+          "heard": "경고! 엑셀과 브레이크를 함께 밟고 있습니다",
           "similarity": 1.0,
-          "seconds": 2.83,
-          "f0": 236.5,
+          "seconds": 2.86,
+          "f0": 265.2,
           "clipped": 0,
-          "sha256": "29eb677b44cffba9ca1870ed8e8d4dd8f8a7295f67af49816b6ac1e1c4a5f3e6"
+          "sha256": "9ff67d64acd5cef5846abc40352d0dfb16ee38f24ecc05473fc477f7d9056b52"
         },
         "warning_female_full": {
-          "text": "주의! 액셀을 계속 깊게 밟고 있습니다!",
-          "take": 3,
-          "heard": "주의! 액셀을 계속 깊게 밟고 있습니다",
+          "text": "경고! 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 0,
+          "heard": "경고! 액셀을 계속 깊게 밟고 있습니다",
           "similarity": 1.0,
-          "seconds": 2.54,
-          "f0": 230.8,
-          "clipped": 0,
-          "sha256": "05698d9692f550781b6014bbf33bf22f0e23b955bf84e5fc95199922d050700a"
-        },
-        "warning_female_speed": {
-          "text": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다!",
-          "take": 2,
-          "heard": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다",
-          "similarity": 1.0,
-          "seconds": 3.39,
+          "seconds": 2.59,
           "f0": 250.0,
           "clipped": 0,
-          "sha256": "f7aeab18bc8ba134ab76620ec029c60f926285702bf67746ddf3dfcd10a3f232"
+          "sha256": "03ca846f1d0460bedd943b9c38c87795f2315eb3c677a37eb48640f3041896d4"
+        },
+        "warning_female_speed": {
+          "text": "경고! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 5,
+          "heard": "경고! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다",
+          "similarity": 1.0,
+          "seconds": 3.42,
+          "f0": 248.7,
+          "clipped": 0,
+          "sha256": "04d0570347801928101a02583d271fbef29bfc65b15602661218d28b3c3a5f18"
         }
       }
     }
