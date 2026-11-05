@@ -7,7 +7,7 @@ TASK_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 : "${PEDAL_SIGN_ALIAS:?Set the signing alias}"
 : "${PEDAL_STORE_PASSWORD:?Set the keystore password in the environment}"
 : "${PEDAL_KEY_PASSWORD:?Set the key password in the environment}"
-PEDAL_NAME=${PEDAL_TEAM_NAME:-HASH}
+PEDAL_NAME=${PEDAL_TEAM_NAME:-SA}
 PEDAL_OUTPUT="$TASK_DIR/../apk/${PEDAL_NAME}_페달체크_release.apk"
 mkdir -p "$TASK_DIR/../apk"
 "$TASK_DIR/gradlew" -p "$TASK_DIR" assembleRelease

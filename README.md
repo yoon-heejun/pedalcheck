@@ -1,6 +1,6 @@
 # 페달체크 · PedalCheck
 
-**팀 HASH | 현재 입력된 액셀과 브레이크를 큰 글씨·색·페달 그림으로 보여 주고, 설정한 입력 패턴을 화면과 한국어 음성으로 알리는 차량용 보조 앱 프로토타입입니다.**
+**팀 SA | 현재 입력된 액셀과 브레이크를 큰 글씨·색·페달 그림으로 보여 주고, 설정한 입력 패턴을 화면과 한국어 음성으로 알리는 차량용 보조 앱 프로토타입입니다.**
 
 공모전 제출 버전은 **0.4.1 / versionCode 5**입니다. 이 저장소는 Android 소스와 실행 가능한 서명된 release APK를 함께 제공합니다.
 
@@ -8,11 +8,11 @@
 
 ## 제출 APK
 
-- 파일 경로: [`apk/HASH_페달체크_release.apk`](apk/HASH_페달체크_release.apk)
-- [APK 다운로드](https://github.com/seokHyn/pedalcheck/raw/refs/heads/main/apk/HASH_%ED%8E%98%EB%8B%AC%EC%B2%B4%ED%81%AC_release.apk)
+- 파일 경로: [`apk/SA_페달체크_release.apk`](apk/SA_페달체크_release.apk)
+- [APK 다운로드](https://github.com/seokHyn/pedalcheck/raw/refs/heads/main/apk/SA_%ED%8E%98%EB%8B%AC%EC%B2%B4%ED%81%AC_release.apk)
 - 패키지: `io.pedalcheck.app`
 - 실행 Activity: `io.pedalcheck.app.MainActivity`
-- release variant, `debuggable=false`, HASH 제출용 자체 서명
+- release variant, `debuggable=false`, 제출용 자체 서명
 - Android 9 / API 28 이상, targetSdk 35
 - SHA-256: `28ff21461f42f461645c677bcf5ad0d769fb5c59b0f8a570b19aa816014b9690`
 
@@ -21,7 +21,7 @@
 Android API 28 이상 기기 또는 Pleos 에뮬레이터에 APK를 다운로드해 설치합니다. 수동 설치 시 해당 기기의 APK 설치 허용 설정이 필요할 수 있습니다. ADB를 사용하면 저장소 루트에서 다음을 실행합니다.
 
 ```sh
-adb install -r apk/HASH_페달체크_release.apk
+adb install -r apk/SA_페달체크_release.apk
 adb shell am start -n io.pedalcheck.app/.MainActivity
 ```
 
@@ -56,7 +56,7 @@ cd android-app
 ./gradlew assembleDebug
 ```
 
-`assembleRelease` 산출물은 `app/build/outputs/apk/release/app-release-unsigned.apk`입니다. 직접 설치하려면 소유자의 키로 서명해야 합니다. 이 저장소의 `apk/HASH_페달체크_release.apk`는 이미 서명되어 바로 설치할 수 있습니다.
+`assembleRelease` 산출물은 `app/build/outputs/apk/release/app-release-unsigned.apk`입니다. 직접 설치하려면 소유자의 키로 서명해야 합니다. 이 저장소의 `apk/SA_페달체크_release.apk`는 이미 서명되어 바로 설치할 수 있습니다.
 
 재서명은 [서명 스크립트 안내](android-app/README.md)를 참고하세요. 서명 키·암호·SDK 경로·로컬 캐시는 저장소에 포함하지 않습니다.
 

@@ -30,7 +30,7 @@ android-app/evidence/
 android-app/apk/
 apk/*
 !apk/README.md
-!apk/HASH_페달체크_release.apk
+!apk/SA_페달체크_release.apk
 !submission/페달체크_심사위원용_모션그래픽_시연.mp4
 __pycache__/
 *.pyc
