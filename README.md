@@ -9,7 +9,7 @@
 ## 제출 APK
 
 - 파일 경로: [`apk/SA_페달체크_release.apk`](apk/SA_페달체크_release.apk)
-- [APK 다운로드](https://github.com/seokHyn/pedalcheck/raw/refs/heads/main/apk/SA_%ED%8E%98%EB%8B%AC%EC%B2%B4%ED%81%AC_release.apk)
+- [APK 다운로드](https://github.com/yoon-heejun/pedalcheck/raw/refs/heads/main/apk/SA_%ED%8E%98%EB%8B%AC%EC%B2%B4%ED%81%AC_release.apk)
 - 패키지: `io.pedalcheck.app`
 - 실행 Activity: `io.pedalcheck.app.MainActivity`
 - release variant, `debuggable=false`, 제출용 자체 서명
