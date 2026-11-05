@@ -1,63 +1,89 @@
 {
-  "model_id": "Supertone/supertonic-3",
-  "model_revision": "3cadd1ee6394adea1bd021217a0e650ede09a323",
-  "speaker": "M3",
-  "language": "ko",
-  "model_license": "BigScience Open RAIL-M",
-  "code_license": "MIT",
-  "inference": "local ONNX Runtime, offline, preset voice, no cloning",
-  "delivery": "neutral Korean explanatory broadcast script; no artificial pitch lowering",
-  "warnings": {
-    "warning_simultaneous": {
-      "spec": {
-        "text": "주의. 액셀과 브레이크를 함께 밟고 있습니다.",
-        "speaker": "M3",
-        "language": "ko",
-        "total_steps": 24,
-        "speed": 1.08,
-        "seed": 20261105,
-        "postprocess": "outer silence trim, loudness only; 48kHz PCM"
-      },
-      "file": "qa/tts-supertonic3/M3/warnings/warning_simultaneous.wav",
-      "duration": 2.59,
-      "sample_rate": 48000,
-      "sha256": "35d63a48cff7990b392aaf06e81da71dd33e67ecae1d32edc99de0b39dab6d6b",
-      "peak_dbfs": -3.32,
-      "generation_seconds": 2.82
+  "design_model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-8bit",
+  "clone_model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
+  "original_models": [
+    "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+    "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
+  ],
+  "model_license": "Apache-2.0",
+  "inference": "local MLX on Apple Silicon, offline; designed voices, no real person cloned",
+  "postprocess": "outer silence trim, fades, loudness only; 48kHz PCM then AAC 24kHz mono",
+  "voices": {
+    "male": {
+      "voice_design_instruction": "A Korean male broadcaster in his late thirties. A clear, grounded medium-low voice. Speak native standard Seoul Korean. A stern, tense, fast warning delivered at low pitch, like a pilot calling out an alert. No raised pitch.",
+      "anchor_seed": 20262710,
+      "temperature": 0.9,
+      "top_p": 1.0,
+      "clips": {
+        "warning_male_simultaneous": {
+          "text": "주의! 액셀과 브레이크를 함께 밟고 있습니다!",
+          "take": 4,
+          "heard": "주의! 액셀과 브레이크를 함께 밟고 있습니다",
+          "similarity": 1.0,
+          "seconds": 3.14,
+          "f0": 178.4,
+          "clipped": 0,
+          "sha256": "a17863ed9062f6681aec2efb650eeb1d622f3f9a96aa8a664ddc8891b77bfb8b"
+        },
+        "warning_male_full": {
+          "text": "주의! 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 4,
+          "heard": "주의! 액셀을 계속 깊게 밟고 있습니다",
+          "similarity": 1.0,
+          "seconds": 2.65,
+          "f0": 185.3,
+          "clipped": 0,
+          "sha256": "b9061e4a8a5bcea61c7eec9ea3361a3b2812c1fc828365f5a8c00d03ec0d73b8"
+        },
+        "warning_male_speed": {
+          "text": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 3,
+          "heard": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다.",
+          "similarity": 1.0,
+          "seconds": 3.93,
+          "f0": 154.8,
+          "clipped": 0,
+          "sha256": "ed1ee968eae2f6d14bb9c1fae22c7eb0b41d831a1ebbdce29170dab853bdbe1b"
+        }
+      }
     },
-    "warning_full": {
-      "spec": {
-        "text": "주의. 액셀을 계속 깊게 밟고 있습니다.",
-        "speaker": "M3",
-        "language": "ko",
-        "total_steps": 24,
-        "speed": 1.08,
-        "seed": 20261105,
-        "postprocess": "outer silence trim, loudness only; 48kHz PCM"
-      },
-      "file": "qa/tts-supertonic3/M3/warnings/warning_full.wav",
-      "duration": 2.323,
-      "sample_rate": 48000,
-      "sha256": "f51f7bb8a034d48a3f4e748e73897c3184b6c01b8c7f57a526fca3aab999ed85",
-      "peak_dbfs": -2.24,
-      "generation_seconds": 2.3
-    },
-    "warning_speed": {
-      "spec": {
-        "text": "주의. 높은 속도에서 액셀을 계속 깊게 밟고 있습니다.",
-        "speaker": "M3",
-        "language": "ko",
-        "total_steps": 24,
-        "speed": 1.08,
-        "seed": 20261105,
-        "postprocess": "outer silence trim, loudness only; 48kHz PCM"
-      },
-      "file": "qa/tts-supertonic3/M3/warnings/warning_speed.wav",
-      "duration": 3.157,
-      "sample_rate": 48000,
-      "sha256": "8648ad3154ba6bcf7061989d3334e898405e3373334586c213f6c57594eeda4b",
-      "peak_dbfs": -2.02,
-      "generation_seconds": 3.1
+    "female": {
+      "voice_design_instruction": "A Korean woman in her thirties with a naturally female, firm and piercing mid-high voice. Speak native standard Seoul Korean. This is a live emergency alert inside a moving car and the driver must react within a second. The delivery is urgent, tense and commanding: fast pace, strong projected voice, high energy, tight breath. Hit 주의 hard and sharply, with only a very short pause after it, then state the rest quickly with crisp articulation and forceful stress, pressing to the end of each sentence. Leave a clear short pause between sentences. Serious and alarmed, never calm, soft, friendly, sing-song or theatrical, and no screaming or crying.",
+      "anchor_seed": 20261502,
+      "temperature": 0.9,
+      "top_p": 1.0,
+      "clips": {
+        "warning_female_simultaneous": {
+          "text": "주의! 액셀과 브레이크를 함께 밟고 있습니다!",
+          "take": 5,
+          "heard": "주의! 액셀과 브레이크를 함께 밟고 있습니다",
+          "similarity": 1.0,
+          "seconds": 2.83,
+          "f0": 236.5,
+          "clipped": 0,
+          "sha256": "29eb677b44cffba9ca1870ed8e8d4dd8f8a7295f67af49816b6ac1e1c4a5f3e6"
+        },
+        "warning_female_full": {
+          "text": "주의! 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 3,
+          "heard": "주의! 액셀을 계속 깊게 밟고 있습니다",
+          "similarity": 1.0,
+          "seconds": 2.54,
+          "f0": 230.8,
+          "clipped": 0,
+          "sha256": "05698d9692f550781b6014bbf33bf22f0e23b955bf84e5fc95199922d050700a"
+        },
+        "warning_female_speed": {
+          "text": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다!",
+          "take": 2,
+          "heard": "주의! 높은 속도에서 액셀을 계속 깊게 밟고 있습니다",
+          "similarity": 1.0,
+          "seconds": 3.39,
+          "f0": 250.0,
+          "clipped": 0,
+          "sha256": "f7aeab18bc8ba134ab76620ec029c60f926285702bf67746ddf3dfcd10a3f232"
+        }
+      }
     }
   }
 }

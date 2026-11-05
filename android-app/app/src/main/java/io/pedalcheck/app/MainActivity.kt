@@ -192,6 +192,15 @@ class MainActivity : Activity() {
         display.addView(toggle("어두운 화면", night) { preferences.edit().putBoolean("night", it).apply(); buildPage() })
         val voice = section("경고 음성", "경고가 발생할 때만 한국어 음성으로 알려드려요.")
         voice.addView(toggle("경고 음성 사용", preferences.getBoolean("voice", true)) { preferences.edit().putBoolean("voice", it).apply(); WarningAudio.refresh() })
+        gap(voice, 12); voice.addView(label("목소리", 21f, bold = true)); gap(voice, 10)
+        val voiceChoices = row(); val selectedVoice = WarningVoice.from(preferences.getString(WarningVoice.PREFERENCE, null))
+        WarningVoice.entries.forEach { option ->
+            val selected = option == selectedVoice
+            voiceChoices.addView(button((if (selected) "✓ " else "") + option.label, selected) {
+                preferences.edit().putString(WarningVoice.PREFERENCE, option.name).apply(); WarningAudio.voiceChanged(); buildPage()
+            }.apply { isSelected = selected; contentDescription = "경고 목소리 ${option.label}${if (selected) ", 선택됨" else ""}" }, LinearLayout.LayoutParams(0, -2, 1f).apply { marginEnd = dp(8) })
+        }
+        voice.addView(voiceChoices); gap(voice, 18)
         voice.addView(label("동시 입력과 깊은 액셀 지속 시 안내합니다. 경고가 이어지면 8초 간격으로 반복하고, 해제되면 즉시 멈춰요. 인터넷 연결 없이 재생됩니다.", 20f, muted))
         val about = section("페달체크 안내", "페달 입력을 눈으로 확인하는 보조 화면입니다.")
         about.addView(label("페달 오조작을 판정하거나 차량을 제어하지 않아요. 현재는 실제 차량 신호 대신 모의 신호로 동작합니다.", 19f, muted))
